@@ -8,6 +8,7 @@ const NavBar = () => {
       <div className="header__wrapper">
         <Link to="/">Главная</Link>
         <Link to="/account">Аккаунт</Link>
+        <Link to="/registration">Регистрация</Link>
       </div>
     </header>
   );

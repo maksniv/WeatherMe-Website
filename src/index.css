@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('./pages/Home/Home.css');
+@import url('./pages/Registration/Registration.css');
 
 * {
   margin: 0;
@@ -12,6 +13,9 @@
 
 #root {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 body {
@@ -26,6 +30,7 @@ body {
   height: 100px;
   display: flex;
   flex-wrap: nowrap;
+  margin: 0;
   justify-content: space-around;
   align-items: center;
   background-color: aliceblue;
@@ -40,5 +45,6 @@ body {
   display: flex;
   width: 20%;
   flex-wrap: nowrap;
+  gap: 1rem;
   justify-content: space-around;
 }
