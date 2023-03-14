@@ -34,10 +34,12 @@
   background: #e5464f;
   font-weight: 300;
   font-size: 20px;
+  transition: all 0.25s ease;
 }
 
 .сontainer__form-button:hover {
-  transform: scale(0.99);
+  transform: scale(1.05);
+  transition: all 0.25s ease;
 }
 
 .container__weather-card {
@@ -88,8 +90,9 @@
 }
 
 .container__weather-card_img {
-  background-image: url('/src/10d@4x.png');
+  background-image: url('/src/img/10d@4x.png');
   background-repeat: no-repeat;
+  background-position: center;
   width: 200px;
   height: 200px;
 }

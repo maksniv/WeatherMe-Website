@@ -9,6 +9,7 @@ const NavBar = () => {
         <Link to="/">Главная</Link>
         <Link to="/account">Аккаунт</Link>
         <Link to="/registration">Регистрация</Link>
+        <Link to="*">404</Link>
       </div>
     </header>
   );
