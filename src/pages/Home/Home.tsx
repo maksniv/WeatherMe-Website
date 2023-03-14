@@ -1,7 +1,16 @@
 import React from 'react';
+import Form from './components/Form';
+import WeatherCard from './components/WeatherCard';
 
 const Home = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <div className="container">
+        <Form />
+        <WeatherCard />
+      </div>
+    </>
+  );
 };
 
 export default Home;
