@@ -2,6 +2,7 @@
 @import url('./pages/Home/Home.css');
 @import url('./pages/Registration/Registration.css');
 @import url('./pages/PageNotFound/PageNotFound.css');
+@import url('./pages/Account/Account.css');
 
 * {
   margin: 0;

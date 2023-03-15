@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PageNotFound = () => {
   return (
@@ -11,7 +12,11 @@ const PageNotFound = () => {
           Кажется, что страница, которую вы ищете, где-то потерялась, но не
           беспокойтесь, мы вас вернем.
         </div>
-        <button className="container__page-not-found_button">Вернуться</button>
+        <button className="container__page-not-found_button">
+          <Link className="container__page-not-found_link" to="/">
+            Вернуться
+          </Link>
+        </button>
       </div>
       <div className="container__page-not-found_img"></div>
     </div>

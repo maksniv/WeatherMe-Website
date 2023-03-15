@@ -1,7 +1,12 @@
 import React from 'react';
+import FavorityCity from './components/FavorityCity';
 
 const Account = () => {
-  return <h1>Account</h1>;
+  return (
+    <div className="container_favorite-cities">
+      <FavorityCity />
+    </div>
+  );
 };
 
 export default Account;
