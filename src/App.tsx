@@ -4,7 +4,7 @@ import Account from './pages/Account/Account';
 import Home from './pages/Home/Home';
 import Registration from './pages/Registration/Registration';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import Authorization from './pages/Authorization/Authorization';
 
 function App() {

@@ -16,8 +16,8 @@ const Registration = () => {
         <input
           className="container__registration-form_input-mail"
           id="email"
-          type="email"
           name="email"
+          type="email"
           value={data.email}
           onChange={handleChange}
           placeholder="Электронная почта..."

@@ -11,8 +11,13 @@ const Authorization = () => {
     }));
   };
 
+  const handleSubmit = (event: any): void => {
+    event.preventDefault();
+    console.log(event);
+  };
+
   return (
-    <form className="container__authorization-form">
+    <form className="container__authorization-form" onSubmit={handleSubmit}>
       <div className="container__authorization-form_title">Авторизация</div>
       <div className="container__authorization-form_wrapper">
         <input
@@ -43,7 +48,11 @@ const Authorization = () => {
           </Link>
         </span>
       </div>
-      <button type="submit" className="сontainer__authorization-form_button">
+      <button
+        type="submit"
+        disabled={true}
+        className="сontainer__authorization-form_button"
+      >
         Авторизоваться
       </button>
     </form>

@@ -1,10 +1,10 @@
 import React from 'react';
-import FavorityCity from './components/FavorityCity';
+import FavoriteCity from './components/FavoriteCity';
 
 const Account = () => {
   return (
     <div className="container_favorite-cities">
-      <FavorityCity />
+      <FavoriteCity />
     </div>
   );
 };

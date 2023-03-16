@@ -65,6 +65,10 @@
   transition: all 0.25s ease;
 }
 
+.сontainer__authorization-form_button:disabled{
+  background: #767676;
+}
+
 .сontainer__authorization-form_button:hover {
   transition: all 0.25s ease;
   transform: scale(1.03);
