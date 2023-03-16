@@ -1,0 +1,81 @@
+.container__authorization-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 50%;
+  width: 25%;
+  margin: auto;
+  padding: 15px;
+
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.container__authorization-form_title {
+  text-align: center;
+  width: 100%;
+  height: 4rem;
+  border-radius: 6px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.container__authorization-form_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container__authorization-form_input-mail {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.container__authorization-form_input-password {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.сontainer__authorization-form_button {
+  padding: 5px;
+  background: #e5464f;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  font-weight: 300;
+  font-size: 20px;
+  transition: all 0.25s ease;
+}
+
+.сontainer__authorization-form_button:hover {
+  transition: all 0.25s ease;
+  transform: scale(1.03);
+}
+
+.сontainer__authorization-form_span {
+  color: rgb(161, 161, 161);
+  font-size: 0.8rem;
+}
+
+.container__authorization-form_link {
+  color: rgb(62, 62, 62);
+  margin-left: 0.5rem;
+}
