@@ -1,11 +1,20 @@
-.container__authorization-form {
+.container__forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50%;
+  width: 20%;
+  margin: auto;
+}
+
+.container__form-authorization {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 50%;
-  width: 25%;
-  margin: auto;
+  height: 100%;
+  width: 100%;
   padding: 15px;
 
   background: rgba(255, 255, 255, 0.7);
@@ -14,7 +23,8 @@
   backdrop-filter: blur(5px);
 }
 
-.container__authorization-form_title {
+.container__form_title {
+  user-select: none;
   text-align: center;
   width: 100%;
   height: 4rem;
@@ -23,7 +33,7 @@
   font-size: 30px;
 }
 
-.container__authorization-form_wrapper {
+.container__form_wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -32,7 +42,7 @@
   gap: 1rem;
 }
 
-.container__authorization-form_input-mail {
+.container__form_input-mail {
   padding: 15px;
   border: none;
   width: 100%;
@@ -42,7 +52,7 @@
   font-size: 20px;
 }
 
-.container__authorization-form_input-password {
+.container__form_input-password {
   padding: 15px;
   border: none;
   width: 100%;
@@ -52,7 +62,7 @@
   font-size: 20px;
 }
 
-.сontainer__authorization-form_button {
+.сontainer__form_button {
   padding: 5px;
   background: #e5464f;
   color: #fff;
@@ -62,24 +72,28 @@
   height: 4rem;
   font-weight: 300;
   font-size: 20px;
+  user-select: none;
   transition: all 0.25s ease;
 }
 
-.сontainer__authorization-form_button:disabled{
+.сontainer__form_button:disabled {
   background: #767676;
 }
 
-.сontainer__authorization-form_button:hover {
+.сontainer__form_button:hover {
   transition: all 0.25s ease;
   transform: scale(1.03);
 }
 
-.сontainer__authorization-form_span {
+.сontainer__form_span {
+  margin-top: 1rem;
+  user-select: none;
   color: rgb(161, 161, 161);
   font-size: 0.8rem;
 }
 
-.container__authorization-form_link {
+.container__form_link {
+  user-select: none;
   color: rgb(62, 62, 62);
   margin-left: 0.5rem;
 }

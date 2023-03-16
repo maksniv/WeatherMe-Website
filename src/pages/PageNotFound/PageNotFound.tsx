@@ -13,7 +13,10 @@ const PageNotFound = () => {
           беспокойтесь, мы вас вернем.
         </div>
         <button className="container__page-not-found_button">
-          <Link className="container__page-not-found_link" to="/">
+          <Link
+            className="container__page-not-found_link"
+            to="/WeatherMe-Website/"
+          >
             Вернуться
           </Link>
         </button>

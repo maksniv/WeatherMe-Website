@@ -1,61 +1,54 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import AuthorizationForm from './components/AuthorizationForm';
+import RegistrationForm from './components/RegistrationForm';
 
 const Authorization = () => {
-  const [data, setData] = useState({ email: '', password: '' });
+  const { type } = useParams();
+  const [formType, setFormType] = useState(
+    type === 'registration' ? type : 'authorization'
+  );
 
-  const handleChange = (event: any): void => {
-    setData((prevState) => ({
-      ...prevState,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  const handleSubmit = (event: any): void => {
-    event.preventDefault();
-    console.log(event);
+  const toggleFormType = (params: any) => {
+    setFormType((prevState) =>
+      prevState === 'registration' ? 'authorization' : 'registration'
+    );
   };
 
   return (
-    <form className="container__authorization-form" onSubmit={handleSubmit}>
-      <div className="container__authorization-form_title">Авторизация</div>
-      <div className="container__authorization-form_wrapper">
-        <input
-          className="container__authorization-form_input-mail"
-          id="email"
-          name="email"
-          type="email"
-          value={data.email}
-          onChange={handleChange}
-          placeholder="Электронная почта..."
-        />
-        <input
-          className="container__authorization-form_input-password"
-          id="password"
-          name="password"
-          type="password"
-          value={data.password}
-          onChange={handleChange}
-          placeholder="Пароль..."
-        />
-        <span className="сontainer__authorization-form_span">
-          Еще нет аккаунта?
-          <Link
-            className="container__authorization-form_link"
-            to="/registration"
-          >
-            Зарегистрироваться!
-          </Link>
-        </span>
-      </div>
-      <button
-        type="submit"
-        disabled={true}
-        className="сontainer__authorization-form_button"
-      >
-        Авторизоваться
-      </button>
-    </form>
+    <>
+      {formType === 'registration' ? (
+        <div className="container__forms">
+          <RegistrationForm />
+          <span className="сontainer__form_span">
+            Уже есть аккаунт?
+            <a
+              href="#"
+              role="button"
+              onClick={toggleFormType}
+              className="container__form_link"
+            >
+              Войти!
+            </a>
+          </span>
+        </div>
+      ) : (
+        <div className="container__forms">
+          <AuthorizationForm />
+          <span className="сontainer__form_span">
+            Еще нет аккаунта?
+            <a
+              href="#"
+              role="button"
+              onClick={toggleFormType}
+              className="container__form_link"
+            >
+              Зарегистрироваться!
+            </a>
+          </span>
+        </div>
+      )}
+    </>
   );
 };
 

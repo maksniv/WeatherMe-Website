@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Registration = () => {
+const RegistrationForm = () => {
   const [data, setData] = useState({ email: '', password: '' });
 
   const handleChange = (event: any): void => {
@@ -10,11 +10,11 @@ const Registration = () => {
     }));
   };
   return (
-    <form className="container__registration-form">
-      <div className="container__registration-form_title">Регистрация</div>
-      <div className="container__registration-form_wrapper">
+    <form className="container__form-authorization">
+      <div className="container__form_title">Регистрация</div>
+      <div className="container__form_wrapper">
         <input
-          className="container__registration-form_input-mail"
+          className="container__form_input-mail"
           id="email"
           name="email"
           type="email"
@@ -23,7 +23,7 @@ const Registration = () => {
           placeholder="Электронная почта..."
         />
         <input
-          className="container__registration-form_input-password"
+          className="container__form_input-password"
           id="password"
           name="password"
           type="password"
@@ -32,11 +32,11 @@ const Registration = () => {
           placeholder="Пароль..."
         />
       </div>
-      <button type="submit" className="сontainer__registration-form_button">
+      <button type="submit" className="сontainer__form_button">
         Зарегистрироваться
       </button>
     </form>
   );
 };
 
-export default Registration;
+export default RegistrationForm;

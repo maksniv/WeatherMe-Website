@@ -4,7 +4,7 @@ const Form = () => {
   return (
     <form className="container__form">
       <input
-        className="container__form-input"
+        className="container__form-input-city"
         type="text"
         placeholder="Найти город..."
         value=""

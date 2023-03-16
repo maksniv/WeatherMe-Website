@@ -8,7 +8,6 @@ const NavBar = () => {
       <div className="header__wrapper">
         <Link to="/WeatherMe-Website/">Главная</Link>
         <Link to="/account">Аккаунт</Link>
-        <Link to="/registration">Регистрация</Link>
         <Link to="/authorization">Авторизация</Link>
         <Link to="*">404</Link>
       </div>

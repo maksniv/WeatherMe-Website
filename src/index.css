@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('./components/NavBar/NavBar.css');
 @import url('./pages/Home/Home.css');
-@import url('./pages/Registration/Registration.css');
 @import url('./pages/Authorization/Authorization.css');
 @import url('./pages/PageNotFound/PageNotFound.css');
 @import url('./pages/Account/Account.css');
