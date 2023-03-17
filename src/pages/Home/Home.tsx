@@ -4,10 +4,10 @@ import WeatherCard from './components/WeatherCard';
 
 const Home = () => {
   return (
-      <div className="container">
-        <Form />
-        <WeatherCard />
-      </div>
+    <div className="container_home">
+      <Form />
+      <WeatherCard />
+    </div>
   );
 };
 

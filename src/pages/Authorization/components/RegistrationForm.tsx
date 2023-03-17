@@ -1,47 +1,75 @@
-import React, { useState } from 'react';
-import Input from './Input';
-// import { object, string } from 'yup';
+import React from 'react';
+import Input from '../../../components/Input/Input';
+import {
+  useForm,
+  SubmitHandler,
+  Controller,
+  useFormState,
+} from 'react-hook-form';
+
+interface IFormInput {
+  email: string;
+  password: string;
+}
 
 const RegistrationForm = () => {
-  const [data, setData] = useState({ email: '', password: '', stayOn: false });
-  // const [errors, setErrors] = useState({});
-
-  const handleChange = (event: any): void => {
-    setData((prevState) => ({
-      ...prevState,
-      [event.target.name]: event.target.value,
-    }));
-  };
-
-  // let userSchema = object({
-  //   email: string().email().required('Email обязателен для заполнения'),
-  //   password: string().email().required('Пароль обязателен для заполнения'),
-  // });
+  const { handleSubmit, control } = useForm<IFormInput>({
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
+  const { errors, isValid } = useFormState({ control });
+  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   return (
-    <form className="container__form-authorization">
+    <form
+      className="container__form-authorization"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="container__form_title">Регистрация</div>
       <div className="container__form_wrapper">
-        <Input
-          className="container__form_input-authorization"
-          id="email"
+        <Controller
           name="email"
-          type="email"
-          placeholder="Электронная почта..."
-          value={data.email}
-          onChange={handleChange}
+          control={control}
+          rules={{ required: 'Обязательно для заполнения' }}
+          render={({ field }) => (
+            <Input
+              className="container__form_input-authorization-email"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Электронная почта..."
+              onChange={(event: any) => field.onChange(event)}
+              value={field.value}
+              errors={errors.email?.message}
+            />
+          )}
         />
-        <Input
-          className="container__form_input-authorization"
-          id="password"
+        <Controller
           name="password"
-          type="password"
-          placeholder="Пароль..."
-          value={data.password}
-          onChange={handleChange}
+          control={control}
+          rules={{ required: 'Обязательно для заполнения' }}
+          render={({ field }) => (
+            <Input
+              className="container__form_input-authorization-password"
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Пароль..."
+              onChange={(event: any) => field.onChange(event)}
+              value={field.value}
+              errors={errors.password?.message}
+            />
+          )}
         />
       </div>
-      <button type="submit" className="сontainer__form_button">
+      <button
+        type="submit"
+        disabled={!isValid}
+        className="сontainer__form_button"
+      >
         Зарегистрироваться
       </button>
     </form>

@@ -6,9 +6,7 @@ const FavoriteCity = () => {
       <div className="container__favorite-cities_card-name">
         Санкт-Петербург<span>Россия</span>
       </div>
-      <div className="container__favorite-cities_card-temp">
-        Температура: 27°C
-      </div>
+      <input type="checkbox" className="container__favorite-cities_checkbox" />
     </div>
   );
 };

@@ -5,6 +5,11 @@ const Account = () => {
   return (
     <div className="container_favorite-cities">
       <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
     </div>
   );
 };

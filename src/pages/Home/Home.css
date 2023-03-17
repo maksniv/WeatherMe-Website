@@ -1,4 +1,4 @@
-.container {
+.container_home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,8 @@
   margin: 0 auto;
 }
 
-.container__form {
+.container__form-search-weather {
+  position: relative;
   width: 60%;
   height: 3rem;
   background: #ffffff;
@@ -27,6 +28,13 @@
   font-size: 20px;
 }
 
+.container__form-help-block-home {
+  position: absolute;
+  color: #e5464f;
+  top: 4.4rem;
+  left: 0.5rem;
+}
+
 .сontainer__form-button-search {
   user-select: none;
   flex-grow: 1;
@@ -37,6 +45,9 @@
   font-weight: 300;
   font-size: 20px;
   transition: all 0.25s ease;
+}
+.сontainer__form-button-search:disabled {
+  background: #9b8283;
 }
 
 .сontainer__form-button-search:hover {
