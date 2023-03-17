@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Input from './Input';
 
 const AuthorizationForm = () => {
-  const [data, setData] = useState({ email: '', password: '' });
+  const [data, setData] = useState({ email: '', password: '', stayOn: false });
 
   const handleChange = (event: any): void => {
     setData((prevState) => ({
@@ -11,33 +11,32 @@ const AuthorizationForm = () => {
     }));
   };
 
-  const handleSubmit = (event: any): void => {
+  const handleSubmit = (event: any) => {
     event.preventDefault();
-    console.log(event);
+    console.log(data);
   };
 
   return (
     <form className="container__form-authorization" onSubmit={handleSubmit}>
       <div className="container__form_title">Авторизация</div>
       <div className="container__form_wrapper">
-        {/* <Input className={}/> */}
-        {/* <input
-          className="container__form_input-mail"
+        <Input
+          className="container__form_input-authorization"
           id="email"
           name="email"
           type="email"
+          placeholder="Электронная почта..."
           value={data.email}
           onChange={handleChange}
-          placeholder="Электронная почта..."
-        /> */}
-        <input
-          className="container__form_input-password"
+        />
+        <Input
+          className="container__form_input-authorization"
           id="password"
           name="password"
           type="password"
+          placeholder="Пароль..."
           value={data.password}
           onChange={handleChange}
-          placeholder="Пароль..."
         />
       </div>
       <button type="submit" className="сontainer__form_button">

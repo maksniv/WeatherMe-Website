@@ -22,14 +22,12 @@ const Authorization = () => {
           <RegistrationForm />
           <span className="сontainer__form_span">
             Уже есть аккаунт?
-            <a
-              href="#"
-              role="button"
+            <button
               onClick={toggleFormType}
-              className="container__form_link"
+              className="container__form_button_link"
             >
               Войти!
-            </a>
+            </button>
           </span>
         </div>
       ) : (
@@ -37,14 +35,12 @@ const Authorization = () => {
           <AuthorizationForm />
           <span className="сontainer__form_span">
             Еще нет аккаунта?
-            <a
-              href="#"
-              role="button"
+            <button
               onClick={toggleFormType}
-              className="container__form_link"
+              className="container__form_button_link"
             >
               Зарегистрироваться!
-            </a>
+            </button>
           </span>
         </div>
       )}

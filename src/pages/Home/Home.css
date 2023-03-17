@@ -27,7 +27,7 @@
   font-size: 20px;
 }
 
-.сontainer__form-button {
+.сontainer__form-button-search {
   user-select: none;
   flex-grow: 1;
   border-radius: 6px;
@@ -39,7 +39,7 @@
   transition: all 0.25s ease;
 }
 
-.сontainer__form-button:hover {
+.сontainer__form-button-search:hover {
   transform: scale(1.05);
   transition: all 0.25s ease;
 }

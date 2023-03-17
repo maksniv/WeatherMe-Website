@@ -9,7 +9,7 @@ const Form = () => {
         placeholder="Найти город..."
         value=""
       />
-      <button type="submit" className="сontainer__form-button">
+      <button type="submit" className="сontainer__form-button-search">
         Поиск
       </button>
     </form>
