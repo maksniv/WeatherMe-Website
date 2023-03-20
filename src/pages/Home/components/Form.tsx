@@ -11,13 +11,15 @@ import { cityValidation } from '../../../validation';
 interface IFormInput {
   searchCity: string;
 }
+type FormProps = {
+  onChange: any;
+};
 
-const Form = () => {
+const Form = ({ onChange }: FormProps) => {
   const {
     handleSubmit,
     control,
     reset,
-    setFocus,
     formState: { isSubmitSuccessful },
   } = useForm<IFormInput>({
     mode: 'onChange',
@@ -25,9 +27,11 @@ const Form = () => {
       searchCity: '',
     },
   });
+
   const { errors, isValid } = useFormState({ control });
+
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
+    onChange(data);
   };
 
   useEffect(() => {
@@ -35,10 +39,6 @@ const Form = () => {
       searchCity: '',
     });
   }, [isSubmitSuccessful]);
-
-  React.useEffect(() => {
-    setFocus('searchCity');
-  }, [setFocus]);
 
   return (
     <form

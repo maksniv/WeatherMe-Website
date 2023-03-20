@@ -39,7 +39,6 @@ const Input = ({
         placeholder={placeholder}
       />
       {type === 'password' && (
-        <>
           <label className="container__form_input-authorization_label">
             <input
               className="container__form_input-authorization_input"
@@ -49,7 +48,6 @@ const Input = ({
             <span className="container__form_input-authorization_span"></span>
             Показать пароль
           </label>
-        </>
       )}
       {errors && <p className="container__form-help-block-home">{errors}</p>}
     </>

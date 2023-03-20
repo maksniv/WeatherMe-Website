@@ -69,6 +69,11 @@
   backdrop-filter: blur(7px);
 }
 
+.container__weather-card_error {
+  font-weight: 300;
+  font-size: 35px;
+}
+
 .container__weather-card_city-name {
   align-self: start;
   font-weight: 300;
@@ -103,11 +108,14 @@
 }
 
 .container__weather-card_img {
-  background-image: url('/src/img/10d@4x.png');
-  background-repeat: no-repeat;
-  background-position: center;
   width: 200px;
   height: 200px;
+}
+
+.container__weather-card_weather-description {
+  font-weight: 300;
+  font-size: 40px;
+  padding-bottom: 3rem;
 }
 
 .container__weather-card_bottom-block {
