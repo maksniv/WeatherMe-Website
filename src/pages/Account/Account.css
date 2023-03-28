@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  /* height: 50%; */
   width: 70%;
   gap: 1rem;
   margin: auto;
@@ -43,9 +43,22 @@
   line-height: 1;
 }
 
-.container__favorite-cities_card-temp {
-  font-weight: 300;
-  font-size: 35px;
+.container__favorite-cities_button {
+  user-select: none;
+  border-radius: 6px;
+  border: none;
+  background: #e5464f;
+  height: 2rem;
+  width: 7rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.container__favorite-cities_button:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease;
 }
 
 .container__favorite-cities_checkbox {

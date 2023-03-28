@@ -6,6 +6,7 @@ const FavoriteCity = () => {
       <div className="container__favorite-cities_card-name">
         Санкт-Петербург<span>Россия</span>
       </div>
+      <button className="container__favorite-cities_button">Подробнее</button>
       <input type="checkbox" className="container__favorite-cities_checkbox" />
     </div>
   );

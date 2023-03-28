@@ -27,7 +27,8 @@ const NavBar = () => {
         >
           Авторизация
         </NavLink>
-        <NavLink to="*">404</NavLink>
+        {/* <NavLink to="*">404</NavLink> */}
+        <button>Выйти</button>
       </div>
     </header>
   );

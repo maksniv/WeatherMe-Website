@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './utils/scrollToTop';
+import App from './App';
+import './index.css';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ScrollToTop />
-      <App />
+      <Provider store={store}>
+        <ScrollToTop />
+        <App />
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -7,7 +7,7 @@ type WeatherCardProps = {
 const WeatherCard = ({ weather }: WeatherCardProps) => {
   return (
     <>
-      {weather == undefined ? (
+      {weather === undefined ? (
         <div className="container__weather-card">
           <span className="container__weather-card_error">Нет данных</span>
         </div>
