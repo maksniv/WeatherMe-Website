@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WeatherMe-Website/static/css/main.97ca7a55.css",
-    "main.js": "/WeatherMe-Website/static/js/main.5b92cb13.js",
+    "main.js": "/WeatherMe-Website/static/js/main.960041a6.js",
     "static/media/PageNotFound.svg": "/WeatherMe-Website/static/media/PageNotFound.12480daf4400bff8486a.svg",
     "index.html": "/WeatherMe-Website/index.html",
     "main.97ca7a55.css.map": "/WeatherMe-Website/static/css/main.97ca7a55.css.map",
-    "main.5b92cb13.js.map": "/WeatherMe-Website/static/js/main.5b92cb13.js.map"
+    "main.960041a6.js.map": "/WeatherMe-Website/static/js/main.960041a6.js.map"
   },
   "entrypoints": [
     "static/css/main.97ca7a55.css",
-    "static/js/main.5b92cb13.js"
+    "static/js/main.960041a6.js"
   ]
 }
