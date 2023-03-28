@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 const NavBar: FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { isAuth, email } = useAuth();
+  const { isAuth } = useAuth();
 
   const activeLink = 'header__link header__link-active';
   const normalLink = 'header__link';
