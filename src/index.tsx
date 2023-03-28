@@ -6,6 +6,7 @@ import ScrollToTop from './utils/scrollToTop';
 import App from './App';
 import './index.css';
 import { store } from './store';
+import './firebase';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

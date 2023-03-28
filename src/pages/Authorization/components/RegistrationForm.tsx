@@ -6,6 +6,9 @@ import {
   Controller,
   useFormState,
 } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../../store/slices/userSlice';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 interface IFormInput {
   email: string;
@@ -21,7 +24,23 @@ const RegistrationForm = () => {
     },
   });
   const { errors, isValid } = useFormState({ control });
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    console.log(data);
+    console.log(data.email);
+    console.log(data.password);
+    handleRegister(data.email, data.password);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleRegister = (email: string, password: string) => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(console.log)
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <form
