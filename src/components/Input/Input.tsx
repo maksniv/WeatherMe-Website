@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
-export type InputProps = {
+interface InputProps {
   className: string;
   id: string;
   name: string;
@@ -9,9 +9,9 @@ export type InputProps = {
   value: any;
   onChange: any;
   errors?: any;
-};
+}
 
-const Input = ({
+const Input: FC<InputProps> = ({
   className,
   id,
   name,
@@ -20,7 +20,7 @@ const Input = ({
   value,
   onChange,
   errors,
-}: InputProps) => {
+}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
@@ -39,15 +39,15 @@ const Input = ({
         placeholder={placeholder}
       />
       {type === 'password' && (
-          <label className="container__form_input-authorization_label">
-            <input
-              className="container__form_input-authorization_input"
-              type="checkbox"
-              onClick={toggleShowPassword}
-            />
-            <span className="container__form_input-authorization_span"></span>
-            Показать пароль
-          </label>
+        <label className="container__form_input-authorization_label">
+          <input
+            className="container__form_input-authorization_input"
+            type="checkbox"
+            onClick={toggleShowPassword}
+          />
+          <span className="container__form_input-authorization_span"></span>
+          Показать пароль
+        </label>
       )}
       {errors && <p className="container__form-help-block-home">{errors}</p>}
     </>

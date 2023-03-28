@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Input from '../../../components/Input/Input';
 import {
   useForm,
@@ -16,7 +16,7 @@ interface IFormInput {
   password: string;
 }
 
-const RegistrationForm = () => {
+const RegistrationForm: FC = () => {
   const { handleSubmit, control } = useForm<IFormInput>({
     mode: 'onChange',
     defaultValues: {

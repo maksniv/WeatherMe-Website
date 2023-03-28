@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/use-auth';
 import { removeUser } from '../../store/slices/userSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar: FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isAuth, email } = useAuth();
@@ -43,9 +43,10 @@ const NavBar = () => {
         {isAuth && (
           <button
             className="header__wrapper-button"
-            onClick={() =>
-              dispatch(removeUser(), navigate('/WeatherMe-Website'))
-            }
+            onClick={() => {
+              dispatch(removeUser());
+              navigate('/WeatherMe-Website');
+            }}
           >
             Выйти
           </button>
