@@ -47,3 +47,21 @@
   width: 100%;
   background-color: #e5464f;
 }
+
+.header__wrapper-button {
+  user-select: none;
+  border-radius: 6px;
+  border: none;
+  background: #e5464f;
+  height: 1.5rem;
+  width: 4.5rem;
+  transition: all 0.25s ease;
+  color: #fff;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.header__wrapper-button:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease;
+}

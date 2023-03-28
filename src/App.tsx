@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/WeatherMe-Website" element={<Home />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/authorization/:type?" element={<Authorization />} />
+        <Route path="/authorization" element={<Authorization />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>

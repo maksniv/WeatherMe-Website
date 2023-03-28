@@ -1,7 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../../hooks/use-auth';
+import { removeUser } from '../../store/slices/userSlice';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { isAuth, email } = useAuth();
+
   const activeLink = 'header__link header__link-active';
   const normalLink = 'header__link';
 
@@ -15,20 +23,34 @@ const NavBar = () => {
         >
           Главная
         </NavLink>
-        <NavLink
-          to="/account"
-          className={({ isActive }) => (isActive ? activeLink : normalLink)}
-        >
-          Аккаунт
-        </NavLink>
-        <NavLink
-          to="/authorization"
-          className={({ isActive }) => (isActive ? activeLink : normalLink)}
-        >
-          Авторизация
-        </NavLink>
+        {isAuth && (
+          <NavLink
+            to="/account"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            Аккаунт
+          </NavLink>
+        )}
+
+        {!isAuth && (
+          <NavLink
+            to="/authorization"
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            Авторизация
+          </NavLink>
+        )}
+        {isAuth && (
+          <button
+            className="header__wrapper-button"
+            onClick={() =>
+              dispatch(removeUser(), navigate('/WeatherMe-Website'))
+            }
+          >
+            Выйти
+          </button>
+        )}
         {/* <NavLink to="*">404</NavLink> */}
-        <button>Выйти</button>
       </div>
     </header>
   );

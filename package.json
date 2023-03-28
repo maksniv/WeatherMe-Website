@@ -1,5 +1,5 @@
 {
-  "name": "c",
+  "name": "weather-me-website",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://maksniv.github.io/WeatherMe-Website/",
@@ -12,7 +12,6 @@
     "@types/node": "^16.18.15",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@types/react-router-dom": "^5.3.3",
     "firebase": "^9.18.0",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
@@ -54,7 +53,9 @@
   },
   "description": "SPA погоды. В нем можно смотреть погоду на главном экране.",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
+  },
   "author": "",
   "license": "ISC"
 }

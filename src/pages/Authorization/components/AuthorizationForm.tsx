@@ -9,6 +9,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../store/slices/userSlice';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 interface IFormInput {
   email: string;
@@ -23,19 +24,30 @@ const AuthorizationForm = () => {
       password: '',
     },
   });
-  const { errors, isValid } = useFormState({ control });
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    console.log(data);
-    console.log(data.email);
-    console.log(data.password);
-  };
+
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
+
+  const { errors, isValid } = useFormState({ control });
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    handleLogin(data.email, data.password);
+  };
 
   const handleLogin = (email: string, password: string) => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
-      .then(console.log)
+      .then(({ user }) => {
+        dispatch(
+          setUser({
+            email: user.email,
+            token: user.refreshToken,
+            id: user.uid,
+          })
+        );
+        navigate('/WeatherMe-Website');
+      })
       .catch((error) => {
         console.log(error);
       });
