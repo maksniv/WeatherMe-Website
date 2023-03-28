@@ -10,6 +10,18 @@ const Account = () => {
       <FavoriteCity />
       <FavoriteCity />
       <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
+      <FavoriteCity />
     </div>
   );
 };

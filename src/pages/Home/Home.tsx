@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container_home">
+    <div className="container_main">
       <Form onChange={onChange} />
       <WeatherCard weather={weather} />
     </div>

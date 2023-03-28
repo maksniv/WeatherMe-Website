@@ -11,6 +11,7 @@ function App() {
     <>
       <NavBar />
       <Routes>
+        
         <Route path="/WeatherMe-Website" element={<Home />} />
         <Route path="/account" element={<Account />} />
         <Route path="/authorization/:type?" element={<Authorization />} />

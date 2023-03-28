@@ -5,8 +5,6 @@ type WeatherCardProps = {
 };
 
 const WeatherCard = ({ weather }: WeatherCardProps) => {
-  console.log(weather);
-
   return (
     <>
       {weather == undefined ? (
