@@ -28,12 +28,13 @@
   font-size: 20px;
 }
 
-.container__form-help-block-home {
+/* .container__form-help-block-home {
+  position: relative; 
   position: absolute;
   color: #e5464f;
   top: 4.4rem;
   left: 0.5rem;
-}
+} */
 
 .сontainer__form-button-search {
   user-select: none;

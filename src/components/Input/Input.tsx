@@ -1,4 +1,5 @@
 import React, { FC, useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 interface InputProps {
   className: string;
@@ -37,7 +38,11 @@ const Input: FC<InputProps> = ({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        data-tooltip-id={id}
+        data-tooltip-place="bottom"
+        data-tooltip-content={errors}
       />
+      {errors && <Tooltip id={id} />}
       {type === 'password' && (
         <label className="container__form_input-authorization_label">
           <input
@@ -49,7 +54,6 @@ const Input: FC<InputProps> = ({
           Показать пароль
         </label>
       )}
-      {errors && <p className="container__form-help-block-home">{errors}</p>}
     </>
   );
 };

@@ -6,6 +6,7 @@ import {
   Controller,
   useFormState,
 } from 'react-hook-form';
+import { passwordValidation } from '../../../validation';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../../store/slices/userSlice';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
@@ -78,7 +79,7 @@ const RegistrationForm: FC = () => {
         <Controller
           name="password"
           control={control}
-          rules={{ required: 'Обязательно для заполнения' }}
+          rules={passwordValidation}
           render={({ field }) => (
             <Input
               className="container__form_input-authorization-password"

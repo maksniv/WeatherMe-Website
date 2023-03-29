@@ -34,7 +34,6 @@
 }
 
 .container__form_wrapper {
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -68,15 +67,16 @@
   font-size: 20px;
 }
 
+.container__form_input-authorization-password:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
 .container__form_input-authorization_label {
   align-self: flex-end;
-
   transition: all 0.3s ease;
-
   font-size: 0.8rem;
-
   height: 1rem;
-
   color: inherit;
 }
 

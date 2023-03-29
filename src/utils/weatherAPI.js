@@ -1,4 +1,3 @@
-// const keyAPI = 'a3e5bc554d00971ceb683ea5445a6e12';
 const keyAPI = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
 
 export async function getCoordinates(city) {

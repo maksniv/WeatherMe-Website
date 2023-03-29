@@ -11,6 +11,7 @@ import { cityValidation } from '../../../validation';
 interface IFormInput {
   searchCity: string;
 }
+
 type FormProps = {
   onChange: any;
 };
@@ -31,7 +32,6 @@ const Form = ({ onChange }: FormProps) => {
   const { errors, isValid } = useFormState({ control });
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    //console.log(data.searchCity)
     onChange(data);
   };
 

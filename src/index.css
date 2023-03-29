@@ -4,6 +4,7 @@
 @import url('./pages/Authorization/Authorization.css');
 @import url('./pages/PageNotFound/PageNotFound.css');
 @import url('./pages/Account/Account.css');
+@import "react-tooltip/dist/react-tooltip.css";
 
 * {
   margin: 0;
