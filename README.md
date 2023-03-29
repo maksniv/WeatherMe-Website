@@ -1,7 +1,22 @@
-# WeatherME
+# WeatherMe. Сайт погоды.
 
-SPA погоды. В нем можно смотреть погоду на главном экране.
+SPA приложение погоды.
 
+1. Разработал Авторизацию/Регистрацию с валидацией форм.
+2. Реализован просмотр погоды на главном разделе сайта.
+3. Используются Redux для хранения состояния пользователя.
 
+## Будет реализовано.
 
-<a href="https://www.flaticon.com/ru/free-icons/" title="Погода иконки">Погода иконки от iconixar - Flaticon</a>
+1. Личный кабинет пользователя (добавить/удалить город в избранное).
+
+## Стек технологий
+
+- React, Typescript
+- React-Redux, Redux Toolkit
+- react-hook-form
+- Firebase
+
+[Web illustrations Monster 404 Error-bro by Storyset](https://storyset.com/web 'Monster 404 Error-bro')
+
+[Погода иконки от iconixar - Flaticon](https://www.flaticon.com/ru/free-icon/cloudy_1163661?term=%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0&related_id=1163661 'Погода иконки')
